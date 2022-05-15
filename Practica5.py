@@ -27,3 +27,26 @@ opc = cv2.waitKey(0)
 cv2.destroyAllWindows()
 
 #Binario Inverso
+_,binaInv = cv2.threshold(imagen,10,255,cv2.THRESH_BINARY_INV)
+_,binaInv2 = cv2.threshold(gris,10,255,cv2.THRESH_BINARY_INV)
+
+cv2.imshow("Binario Inverso",binaInv)
+cv2.moveWindow("Binario Inverso",0,300)
+cv2.imshow("Binario inverso blanco y negro",binaInv2)
+cv2.moveWindow("Binario inverso blanco y negro",1200,300)
+
+opc = cv2.waitKey(0)
+cv2.destroyAllWindows()
+
+#Trunc
+
+_,trunc = cv2.threshold(imagen,10,255,cv2.THRESH_TRUNC)
+_,trunc2 = cv2.threshold(gris,10,255,cv2.THRESH_TRUNC)
+
+cv2.imshow("Trunc",trunc)
+cv2.moveWindow("Trunc",0,300)
+cv2.imshow("Trunc blanco y negro",trunc2)
+cv2.moveWindow("Trunc blanco y negro",1200,300)
+
+opc = cv2.waitKey(0)
+cv2.destroyAllWindows()
